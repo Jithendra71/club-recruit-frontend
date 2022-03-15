@@ -63,7 +63,7 @@ const SignupPage = () => {
     }
   };
   return (
-    <div className={`${classes.root} ${classes.formbackground}`} >
+    <div className={`${classes.root} ${classes.formbackground}`}>
       <Box>
         <div className={classes.heading}>
           <Typography variant="h4" gutterBottom component="h5">
@@ -91,16 +91,17 @@ const SignupPage = () => {
               <TextField
                 label="Name"
                 variant="outlined"
-                required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
               />
               <TextField
-                label="College Email"
+                label="Email"
                 variant="outlined"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                helperText="Only college email accepted"
                 required
               />
               <TextField
@@ -109,6 +110,7 @@ const SignupPage = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                helperText="Minimum 8 characters"
                 required
               />
               <Button type="submit" variant="contained" color="primary">
@@ -133,7 +135,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(10),
 
     "& .MuiBox-root": {
-      height: 400,
+      minHeight: 400,
       width: "100%",
       maxWidth: 400,
       border: "4px solid black",

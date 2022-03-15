@@ -45,6 +45,8 @@ export const RegisterService = async (email, password, name) => {
 
 export const fresherLoginService = async (email, password) => {
   try {
+    console.log("fresherLoginService : ", email);
+
     const { data } = await axios.post(FREHSERS_lOGIN_URL, { email, password });
     return data;
   } catch (error) {
