@@ -1,26 +1,27 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
+import Navbar from "./Components/Navbar"
+import LandingPage from "./Containers/LandingPage";
 
-import Login from "./Components/Auth/Login";
-import Signup from "./Components/Auth/Signup";
+import LoginPage from "./Containers/Auth/LoginPage";
+import SignupPage from "./Containers/Auth/SignupPage";
+import ClubPage from "./Containers/Club/ClubPage";
+import SchedulePage from "./Containers/Club/SchedulePage";
+import MembersPage from "./Containers/Club/MembersPage";
 
 function App() {
-  const Routing = () => {
-    return (
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />{" "}
-      </Routes>
-    );
-  };
   return (
     <BrowserRouter>
       <Navbar />
-      <Routing />
+      <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route exact path="/club" element={<ClubPage />} />
+        <Route path="/schedule" element={<SchedulePage />} />
+        <Route path="/members" element={<MembersPage />} />
+      </Routes>
     </BrowserRouter>
   );
 }
