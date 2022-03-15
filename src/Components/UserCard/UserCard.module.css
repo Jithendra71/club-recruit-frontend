@@ -1,0 +1,24 @@
+.container{
+  border-radius: 2vw;
+  background:  linear-gradient(145deg, #23203c, #2a2548);
+  height: 10vw;
+  width: 10vw;
+  box-shadow: 1vw 1vw 4vw #100e1b, 
+             -1vw -1vw 4vw #3e386b;
+  padding: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3vw;
+  color: #fafafa;
+}
+
+.container:hover{
+  background:  #272343;
+  box-shadow: inset 1vw 1vw 4vw #100e1b, 
+              inset -1vw -1vw 4vw #3e386b;
+  cursor: pointer;
+}
+/* p {
+  text-align: center;
+} */
